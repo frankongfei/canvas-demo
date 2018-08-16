@@ -1,3 +1,10 @@
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
 #xxx{
   background: linear-gradient(to bottom, rgba(252,237,250,1) 0%,rgba(252,179,230,1) 100%);
   display: block;
@@ -12,16 +19,19 @@ html{
 
 .actions{
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
-}
-.actions > #brush{
-  display: none;
+  padding: 20px;
 }
 
-.actions.x > #brush{
-  display: inline-block;
+.actions svg{
+  width:1.5em;
+  height: 1.5em;
+  margin: 0 5px;
+  transition: all 0.3s;/*过度效果*/
 }
-.actions.x > #eraser{
-  display: none
+
+.actions svg.active{
+  fill: red;
+  transform: scale(1.5);/*变成以前的1.2倍*/
 }
