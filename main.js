@@ -64,17 +64,45 @@ function listenToUser(canvas) {
   //特性检测
   if ("ontouchstart" in document.documentElement){
     //触屏设备
-    
-    xxx.ontouchstart = function (){
-      console.log('开始摸我了')
+    canvas.ontouchstart = function(aaa) {
+      //console.log('开始摸我了')
+      var x = aaa.touches[0].clientX
+      var y = aaa.touches[0].clientY
+      //console.log(x,y)
+      using = true
+      if (eraserEnabled) {
+        context.clearRect(x - 5, y - 5, 10, 10)
+      } else {
+        lastPoint = {
+          "x": x,
+          "y": y
+        }
+      }
     }
     
-    xxx.ontouchmove = function (){
-      console.log('边摸边动')
+    
+    xxx.ontouchmove = function (aaa){
+      //console.log('边摸边动')
+      var x = aaa.touches[0].clientX
+      var y = aaa.touches[0].clientY
+      //console.log(x,y)
+      if (!using) {return}
+  
+      if (eraserEnabled) {
+        context.clearRect(x - 5, y - 5, 10, 10)
+      } else {
+        var newPoint = {
+          "x": x,
+          "y": y
+        }
+        drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y)
+        lastPoint = newPoint
+      }
     }
     
-    xxx.ontouchend = function (){
-      console.log('摸完了')
+    xxx.ontouchend = function (aaa){
+      //console.log('摸完了')
+      using = false
     }
   }else{
     //非触屏设备
