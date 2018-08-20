@@ -5,6 +5,21 @@ autoSetCanvasSize(yyy)
 
 listenToUser(yyy)
 
+var colorBlack = false
+var colorRed = false
+var colorOrange = false
+var colorYellow = false
+var colorGreen = false
+var colorBlue = false
+var colorIndigo = false
+var colorPurple = false
+colorBlack.onclick = function(){
+  
+}
+
+
+
+
 
 var eraserEnabled = false
 pen.onclick = function(){
