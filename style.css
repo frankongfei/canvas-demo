@@ -14,6 +14,7 @@ ul,ol{list-style: none;}
 
 body{
   margin: 0px;
+  overflow: hidden;
 }
 
 html{
@@ -48,7 +49,7 @@ html{
   border: 0.5px solid grey;
   width: 25px;
   height: 25px;
-  margin: 12px 10px;
+  margin: 18px 10px;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
   border-radius: 50px;
