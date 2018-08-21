@@ -5,21 +5,94 @@ autoSetCanvasSize(yyy)
 
 listenToUser(yyy)
 
-var colorBlack = false
-var colorRed = false
-var colorOrange = false
-var colorYellow = false
-var colorGreen = false
-var colorBlue = false
-var colorIndigo = false
-var colorPurple = false
-colorBlack.onclick = function(){
-  
+black.onclick = function(){
+  context.strokeStyle = 'black'
+  black.classList.add('active')
+  red.classList.remove('active')
+  orange.classList.remove('active')
+  yellow.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+  indigo.classList.remove('active')
+  purple.classList.remove('active')
 }
-
-
-
-
+red.onclick = function(){
+  context.strokeStyle = 'red'
+  black.classList.remove('active')
+  red.classList.add('active')
+  orange.classList.remove('active')
+  yellow.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+  indigo.classList.remove('active')
+  purple.classList.remove('active')
+}
+orange.onclick = function(){
+  context.strokeStyle = 'orange'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  orange.classList.add('active')
+  yellow.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+  indigo.classList.remove('active')
+  purple.classList.remove('active')
+}
+yellow.onclick = function(){
+  context.strokeStyle = 'yellow'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  orange.classList.remove('active')
+  yellow.classList.add('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+  indigo.classList.remove('active')
+  purple.classList.remove('active')
+}
+green.onclick = function(){
+  context.strokeStyle = 'green'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  orange.classList.remove('active')
+  yellow.classList.remove('active')
+  green.classList.add('active')
+  blue.classList.remove('active')
+  indigo.classList.remove('active')
+  purple.classList.remove('active')
+}
+blue.onclick = function(){
+  context.strokeStyle = 'blue'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  orange.classList.remove('active')
+  yellow.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.add('active')
+  indigo.classList.remove('active')
+  purple.classList.remove('active')
+}
+indigo.onclick = function(){
+  context.strokeStyle = 'indigo'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  orange.classList.remove('active')
+  yellow.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+  indigo.classList.add('active')
+  purple.classList.remove('active')
+}
+purple.onclick = function(){
+  context.strokeStyle = 'purple'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  orange.classList.remove('active')
+  yellow.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+  indigo.classList.remove('active')
+  purple.classList.add('active')
+}
 
 var eraserEnabled = false
 pen.onclick = function(){
@@ -53,14 +126,12 @@ function autoSetCanvasSize(canvas) {
 
 function drawCircle(x, y, radius) {
   context.beginPath()
-  context.fillStyle = 'black'
   context.arc(x, y, radius, 0, Math.PI * 2);
   context.fill()
 }
 
 function drawLine(x1, y1, x2, y2) {
   context.beginPath();
-  context.strokeStyle = 'black'
   context.moveTo(x1, y1) // 起点
   context.lineWidth = 5
   context.lineTo(x2, y2) // 终点
