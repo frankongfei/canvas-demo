@@ -48,14 +48,15 @@ html{
   border: 0.5px solid grey;
   width: 25px;
   height: 25px;
-  margin: 8px 10px;
+  margin: 12px 10px;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
-	border-radius: 50px;
+  border-radius: 50px;
+  transition: all 0.3s;
 }
 
 .colors li.active{
-
+  transform: scale(1.5);
 }
 
 .colors .black{
@@ -90,7 +91,7 @@ html{
   background: purple;
 }
 
-#black .active{
+#black .black active{
   background: black;
   width: 40px;
   height: 40px;
@@ -98,42 +99,42 @@ html{
 
 #red .active{
   background: red;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
 }
 
 #orange .active{
   background: orange;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
 }
 
 #yellow .active{
   background: yellow;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
 }
 
 #green .active{
   background: green;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
 }
 
 #blue .active{
   background: blue;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
 }
 
 #indigo .active{
   background: indigo;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
 }
 
 #purple .active{
   background: purple;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
 }
