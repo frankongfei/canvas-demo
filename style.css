@@ -10,6 +10,9 @@ ul,ol{list-style: none;}
 #xxx{
   background: linear-gradient(to bottom, rgba(252,237,250,1) 0%,rgba(252,179,230,1) 100%);
   display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 
