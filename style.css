@@ -12,6 +12,16 @@ ul,ol{list-style: none;}
   display: block;
 }
 
+
+#download{
+  position: fixed;
+  top: 22px;
+  right: 10px;
+  margin: 0 5px;
+}
+
+
+
 body{
   margin: 0px;
   overflow: hidden;
@@ -139,3 +149,33 @@ html{
   width: 40px;
   height: 40px;
 }
+
+.sizes{
+  position: fixed;
+  right: 10px;
+  bottom:10px;
+  transition: all 0.3s;
+}
+
+.sizes > li{
+  padding: 15px;
+}
+
+.sizes > .thin{
+  height: 0;
+  width: 20px;
+  border-top: 3px solid black;
+}
+
+.sizes > .middle{
+  height: 0;
+  width: 20px;
+  border-top: 5px solid black;
+}
+
+.sizes > .thick{
+  height: 0;
+  width: 20px;
+  border-top: 8px solid black;
+}
+
